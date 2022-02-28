@@ -1,4 +1,5 @@
 function initSearch() {
+
     $("#search").on("input", function() {
         searchMerchant($(this).val());
     });
