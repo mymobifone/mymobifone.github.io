@@ -8,12 +8,16 @@ body {
 
 @font-face {
     font-family: Open Sans;
-    src: url("../fonts/OpenSans-Regular.ttf");
+    src: url("../fonts/OpenSans-Regular.ttf") format('ttf'),
+         url("../fonts/OpenSans-Regular.otf") format('otf'),
+         url("../fonts/OpenSans-Regular.woff") format('woff');
 }
 
 @font-face {
     font-family: Roboto;
-    src: url("../fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf") format('ttf'),
+        url("../fonts/Roboto-Regular.otf") format('otf'),
+        url("../fonts/Roboto-Regular.woff") format('woff');
 }
 
 .hidden {
