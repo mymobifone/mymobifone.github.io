@@ -75,6 +75,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: white;
 }
 
 .input-search input {
@@ -127,6 +128,7 @@ body {
 .scroll_tab_inner {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .list-group-item {
