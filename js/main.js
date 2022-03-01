@@ -70,6 +70,10 @@ function scrollTo(element, to, duration, onDone) {
     animateScroll();
 }
 
+function openUrl(url) {
+   location.href = url;
+}
+
 $.getJSON("merchant.json", function (data) {
     var scrollTabInner = $('.scroll_tab_inner');
     var tabContainer = $(scrollTabInner).children('span');
@@ -94,7 +98,7 @@ $.getJSON("merchant.json", function (data) {
             if (merchant.group === group) {
                 t++;
                 $('#m' + k).append(
-                    "                <div class=\"col-3 merchant d-flex margin-top-15px flex-column align-items-center\">\n" +
+                    "                <div class=\"col-3 merchant d-flex margin-top-15px flex-column align-items-center\" onclick=\"openUrl('" + merchant.url + "')\">\n" +
                     "                    <img src=\"" + merchant.icon + "\" class=\"merchant-icon\">\n" +
                     "                    <span class=\"merchant-title mt-1\">" + merchant.name + "</span>\n" +
                     "                </div>\n" +
