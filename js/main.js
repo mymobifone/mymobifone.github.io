@@ -1,6 +1,6 @@
 function initSearch() {
 
-    $("#search").on("input", function() {
+    $("#search").on("input", function () {
         searchMerchant($(this).val());
     });
 }
@@ -22,30 +22,32 @@ function searchMerchant(query) {
 function goToPage(pageId) {
     console.log(pageId);
     const El = document.getElementById(pageId);
-    El.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    El.scrollIntoView({behavior: 'smooth', block: 'center'});
     // scrollToElm(document.getElementById("container"), El, 600);
 }
 
-function scrollToElm(container, elm, duration){
+function scrollToElm(container, elm, duration) {
     var pos = getRelativePos(elm);
     console.log(pos);
-    scrollTo( container, pos.top , 0.1);  // duration in seconds
+    scrollTo(container, pos.top, 0.1);  // duration in seconds
 }
 
-function getRelativePos(elm){
+function getRelativePos(elm) {
     var pPos = elm.parentNode.getBoundingClientRect(), // parent pos
         cPos = elm.getBoundingClientRect(), // target pos
         pos = {};
 
-    pos.top    = cPos.top    - pPos.top + elm.parentNode.scrollTop,
-        pos.right  = cPos.right  - pPos.right,
+    pos.top = cPos.top - pPos.top + elm.parentNode.scrollTop,
+        pos.right = cPos.right - pPos.right,
         pos.bottom = cPos.bottom - pPos.bottom,
-        pos.left   = cPos.left   - pPos.left;
+        pos.left = cPos.left - pPos.left;
 
     return pos;
 }
 
-function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
+function easeInOutQuad(t) {
+    return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+};
 
 function scrollTo(element, to, duration, onDone) {
     var start = element.scrollTop,
@@ -53,15 +55,15 @@ function scrollTo(element, to, duration, onDone) {
         startTime = performance.now(),
         val, now, elapsed, t;
 
-    function animateScroll(){
+    function animateScroll() {
         console.log('start');
         now = performance.now();
-        elapsed = (now - startTime)/1000;
-        t = (elapsed/duration);
+        elapsed = (now - startTime) / 1000;
+        t = (elapsed / duration);
 
         element.scrollTop = start + change * easeInOutQuad(t);
 
-        if( t < 1 )
+        if (t < 1)
             window.requestAnimationFrame(animateScroll);
         else
             onDone && onDone();
@@ -71,7 +73,7 @@ function scrollTo(element, to, duration, onDone) {
 }
 
 function openUrl(url) {
-   location.href = url;
+    location.href = url;
 }
 
 $.getJSON("merchant.json", function (data) {
@@ -80,7 +82,7 @@ $.getJSON("merchant.json", function (data) {
     var previous = tabContainer[0];
     var next = tabContainer[1];
     scrollTabInner.html(previous);
-
+    initCarousel(data.banners);
     var groupNames = data.groupNames;
     for (var k = 0; k < groupNames.length; k++) {
         var group = groupNames[k];
@@ -118,73 +120,80 @@ $.getJSON("merchant.json", function (data) {
         $(this).addClass('tab_selected');
 
         var context_obj = this;
-        if($(this).hasClass('scroll_tab_left_finisher')){
+        if ($(this).hasClass('scroll_tab_left_finisher')) {
             context_obj = $('.scroll_tab_inner span.scroll_tab_first').addClass('tab_selected').addClass('scroll_tab_first_selected');
         }
-        if($(this).hasClass('scroll_tab_right_finisher')){
+        if ($(this).hasClass('scroll_tab_right_finisher')) {
             context_obj = $('.scroll_tab_inner span.scroll_tab_last').addClass('tab_selected').addClass('scroll_tab_last_selected');
         }
-        if($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > span.scroll_tab_last').hasClass('scroll_tab_first')){
+        if ($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > span.scroll_tab_last').hasClass('scroll_tab_first')) {
             $('.scroll_tab_inner > span.scroll_tab_left_finisher').addClass('tab_selected').addClass('scroll_tab_left_finisher_selected');
         }
-        if($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner span.scroll_tab_first').hasClass('scroll_tab_last')){
+        if ($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner span.scroll_tab_first').hasClass('scroll_tab_last')) {
             $('.scroll_tab_inner > span.scroll_tab_right_finisher').addClass('tab_selected').addClass('scroll_tab_left_finisher_selected');
         }
 
     });
 
-    $('.scroll_tab_inner span', this).mouseover(function(){
+    $('.scroll_tab_inner span', this).mouseover(function () {
         $(this).addClass('scroll_tab_over');
-        if($(this).hasClass('scroll_tab_left_finisher')){
-            $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).addClass('scroll_tab_over').addClass('scroll_tab_first_over');
+        if ($(this).hasClass('scroll_tab_left_finisher')) {
+            $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).addClass('scroll_tab_over').addClass('scroll_tab_first_over');
         }
-        if($(this).hasClass('scroll_tab_right_finisher')){
-            $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).addClass('scroll_tab_over').addClass('scroll_tab_last_over');
+        if ($(this).hasClass('scroll_tab_right_finisher')) {
+            $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).addClass('scroll_tab_over').addClass('scroll_tab_last_over');
         }
-        if($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).hasClass('scroll_tab_first')){
+        if ($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).hasClass('scroll_tab_first')) {
             $('.scroll_tab_inner > span.scroll_tab_left_finisher', _this).addClass('scroll_tab_over').addClass('scroll_tab_left_finisher_over');
         }
-        if($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).hasClass('scroll_tab_last')){
+        if ($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).hasClass('scroll_tab_last')) {
             $('.scroll_tab_inner > span.scroll_tab_right_finisher', _this).addClass('scroll_tab_over').addClass('scroll_tab_right_finisher_over');
         }
-    }).mouseout(function(){
+    }).mouseout(function () {
         $(this).removeClass('scroll_tab_over');
-        if($(this).hasClass('scroll_tab_left_finisher')){
-            $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_first_over');
+        if ($(this).hasClass('scroll_tab_left_finisher')) {
+            $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_first_over');
         }
-        if($(this).hasClass('scroll_tab_right_finisher')){
-            $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_last_over');
+        if ($(this).hasClass('scroll_tab_right_finisher')) {
+            $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_last_over');
         }
-        if($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).hasClass('scroll_tab_first')){
+        if ($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).hasClass('scroll_tab_first')) {
             $('.scroll_tab_inner > span.scroll_tab_left_finisher', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_left_finisher_over');
         }
-        if($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).hasClass('scroll_tab_last')){
+        if ($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).hasClass('scroll_tab_last')) {
             $('.scroll_tab_inner > span.scroll_tab_right_finisher', _this).removeClass('scroll_tab_over').removeClass('scroll_tab_right_finisher_over');
         }
-    }).click(function(e){
-        console.log('.scroll_tab_inner > '+this.itemTag+(this.itemTag !== 'span' ? ', .scroll_tab_inner > span' : ''));
-
+    }).click(function (e) {
         e.stopPropagation();
-        $('.tab_selected',_this).removeClass('tab_selected scroll_tab_first_selected scroll_tab_last_selected scroll_tab_left_finisher_selected scroll_tab_right_finisher_selected');
+        $('.tab_selected', _this).removeClass('tab_selected scroll_tab_first_selected scroll_tab_last_selected scroll_tab_left_finisher_selected scroll_tab_right_finisher_selected');
         $(this).addClass('tab_selected');
 
         var context_obj = this;
-        if($(this).hasClass('scroll_tab_left_finisher')){
-            context_obj = $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).addClass('tab_selected').addClass('scroll_tab_first_selected');
+        if ($(this).hasClass('scroll_tab_left_finisher')) {
+            context_obj = $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).addClass('tab_selected').addClass('scroll_tab_first_selected');
         }
-        if($(this).hasClass('scroll_tab_right_finisher')){
-            context_obj = $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).addClass('tab_selected').addClass('scroll_tab_last_selected');
+        if ($(this).hasClass('scroll_tab_right_finisher')) {
+            context_obj = $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).addClass('tab_selected').addClass('scroll_tab_last_selected');
         }
-        if($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_last', _this).hasClass('scroll_tab_first')){
+        if ($(this).hasClass('scroll_tab_first') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_last', _this).hasClass('scroll_tab_first')) {
             $('.scroll_tab_inner > span.scroll_tab_left_finisher', _this).addClass('tab_selected').addClass('scroll_tab_left_finisher_selected');
         }
-        if($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > '+_this.itemTag+'.scroll_tab_first', _this).hasClass('scroll_tab_last')){
+        if ($(this).hasClass('scroll_tab_last') || $('.scroll_tab_inner > ' + _this.itemTag + '.scroll_tab_first', _this).hasClass('scroll_tab_last')) {
             $('.scroll_tab_inner > span.scroll_tab_right_finisher', _this).addClass('tab_selected').addClass('scroll_tab_left_finisher_selected');
         }
 
         // "Slide" it into view if not fully visible.
         scroll_selected_into_view.call(_this, state);
 
-        opts.click_callback.call(context_obj,e);
+        opts.click_callback.call(context_obj, e);
     });
 });
+
+function initCarousel(data) {
+    for (let i = 0; i < data.length; i++) {
+        $('#carousel-indicators').append("<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"" + i + "\" class=\"" + (i === 0 ? "active" : "") + "\"></button>");
+        $('#carousel-inner').append("<div class=\"carousel-item " + (i === 0 ? 'active' : '') + "\">\n" +
+            "                <a href=\"" + data[i].url + "\"><img src=\"" + data[i].image + "\" class=\"d-block w-100 img-radius\" alt=\"...\"></a>\n" +
+            "            </div>");
+    }
+}
