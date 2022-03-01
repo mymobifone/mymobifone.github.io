@@ -80,6 +80,12 @@
       "icon": "images/Monkey.png",
       "url": "https://fast.accesstrade.com.vn/deep_link/5756239793543266816/5100392827621950819?utm_source=MBF&utm_medium=Icon&url=https%3A%2F%2Fmonkeyjunior.clix9.com%2F",
       "group":  "Giáo dục"
+    },
+ {
+      "name": "Monkey Junior",
+      "icon": "images/Monkey.png",
+      "url": "https://fast.accesstrade.com.vn/deep_link/5756239793543266816/5100392827621950819?utm_source=MBF&utm_medium=Icon&url=https%3A%2F%2Fmonkeyjunior.clix9.com%2F",
+      "group":  "Giáo dục"
     }
   ]
 }
