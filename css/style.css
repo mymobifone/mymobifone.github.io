@@ -20,14 +20,23 @@ body {
         url("../fonts/Roboto-Regular.woff") format('woff');
 }
 
+.img-radius {
+    border-radius: 10px;
+}
+
+.p12 {
+    padding: 12px;
+}
+
+.carousel {
+    background-color: white;
+}
+
 .hidden {
     display: none !important;
 }
 
 .header-container {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
 }
 
 #scrollable-container {
@@ -40,10 +49,18 @@ body {
     margin-left: 0;
 }
 
+#carouselExampleIndicators {
+    margin-top: 56px;
+}
+
 .search-container {
     background-color: #00579C;
     padding-right: 14px;
     padding-left: 14px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .input-search {
