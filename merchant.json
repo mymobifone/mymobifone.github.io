@@ -31,55 +31,64 @@
       "name": "Tiki",
       "icon": "images/Tiki.png",
       "url": "https://track.rentracksw.com/adx/r.html?idx=0.7028.9202.465.131457&dna=https%3A%2F%2Fti.ki%2FvHvYDeod%2FRENTRACKS%3FTIKI_URI%3Dhttps%253A%252F%252Ftiki.vn%252F",
-      "group": "Mua sắm - Giải trí"
+      "group": "Mua sắm - Giải trí",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "Shopee",
       "icon": "images/Shopee.png",
       "url": "https://track.rentracksw.com/adx/r.html?idx=0.7028.9202.118.43899&dna=https%3A%2F%2Ftrack.rentracksw.com%2Fsign%2Fshopee.php%3Fsid%3D%3C%25%25SPONSOR_ID%25%25%3E%26url%3Dhttps%253A%252F%252Fshopee.vn%252F",
-      "group": "Mua sắm - Giải trí"
+      "group": "Mua sắm - Giải trí",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "ATM Online",
       "icon": "images/ATM.png",
       "url": "https://hyperlead.info/v2/y8O_zAZZDAEkBjz-Lof2MsZLDIstaoIMN1S7HZz2nM8?lp=atm2&aff_sub1=MBF&aff_sub2=Icon",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "Doctor Đồng",
       "icon": "images/Dong.png",
       "url": "https://fast.accesstrade.com.vn/deep_link/5756239793543266816/4564780082073769169?utm_source=MBF&utm_medium=Icon&url=https%3A%2F%2Fdoctordong.vn%2Fvsale%3Fpartner_token%3DBq7OGnaSE-nrzepIjzrKeUszWQFY0YM49EHU5LLo6g8",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "OnCredit",
       "icon": "images/Oncredit.png",
       "url": "https://hyperlead.info/v2/Qb-TVlO1jFYbZbYFF3ODJ0WN7YalkGqhPj4PyliMfjA?lp=oncredit-web-2&aff_sub1=MBF&aff_sub2=Icon",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "Timo",
       "icon": "images/Timo.png",
       "url": "https://timo.vn/goal-save-my-mobi/",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "Vay VP Bank",
       "icon": "images/VN-B.png",
       "url": "https://fast.accesstrade.com.vn/deep_link/5756239793543266816/5025710727525382627?utm_source=MBF&utm_medium=Icon&url=https%3A%2F%2Fvayonline.vpbank.com.vn%2F%3Futm_source%3Daccesstrade%26utm_medium%3DAccesstrade%26utm_campaign%3DUPL_Accesstrade_PO4510015943",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "VIB 2-in-1 Plus",
       "icon": "images/VIB.png",
       "url": "https://online2in1card.vib.com.vn/?utm_source=Affiliate&utm_medium=FISMBFVIB-F1-Sale1&utm_campaign=OnlinePlus",
-      "group":  "Tài chính - Ngân hàng"
+      "group":  "Tài chính - Ngân hàng",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     },
     {
       "name": "Monkey Junior",
       "icon": "images/Monkey.png",
       "url": "https://fast.accesstrade.com.vn/deep_link/5756239793543266816/5100392827621950819?utm_source=MBF&utm_medium=Icon&url=https%3A%2F%2Fmonkeyjunior.clix9.com%2F",
-      "group":  "Giáo dục"
+      "group":  "Giáo dục",
+      "description": "Công ty {Đối tác} là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone; Sản phẩm {Tên sản phẩm} không phải là một phần hay bộ phận của ứng dụng MyMobiFone; Đối với các khiếu nại, thắc mắc về sản phẩm {Tên sản phẩm}, {Đối tác } có trách nhiệm giải quyết theo hotline/email {Thông tin liên hệ của Đối tác}"
     }
   ]
 }

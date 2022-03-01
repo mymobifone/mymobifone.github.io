@@ -26,54 +26,12 @@ function goToPage(pageId) {
     // scrollToElm(document.getElementById("container"), El, 600);
 }
 
-function scrollToElm(container, elm, duration) {
-    var pos = getRelativePos(elm);
-    console.log(pos);
-    scrollTo(container, pos.top, 0.1);  // duration in seconds
-}
-
-function getRelativePos(elm) {
-    var pPos = elm.parentNode.getBoundingClientRect(), // parent pos
-        cPos = elm.getBoundingClientRect(), // target pos
-        pos = {};
-
-    pos.top = cPos.top - pPos.top + elm.parentNode.scrollTop,
-        pos.right = cPos.right - pPos.right,
-        pos.bottom = cPos.bottom - pPos.bottom,
-        pos.left = cPos.left - pPos.left;
-
-    return pos;
-}
-
-function easeInOutQuad(t) {
-    return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t
-};
-
-function scrollTo(element, to, duration, onDone) {
-    var start = element.scrollTop,
-        change = to - start,
-        startTime = performance.now(),
-        val, now, elapsed, t;
-
-    function animateScroll() {
-        console.log('start');
-        now = performance.now();
-        elapsed = (now - startTime) / 1000;
-        t = (elapsed / duration);
-
-        element.scrollTop = start + change * easeInOutQuad(t);
-
-        if (t < 1)
-            window.requestAnimationFrame(animateScroll);
-        else
-            onDone && onDone();
-    };
-
-    animateScroll();
-}
-
-function openUrl(url) {
-    location.href = url;
+function openUrl(name, url, description) {
+    //location.href = url;
+    $('#modal-title').text(name);
+    $('#modal-body').text(description);
+    $('#goToUrl').attr('href', url);
+    $('#showDialog').click();
 }
 
 $.getJSON("merchant.json", function (data) {
@@ -96,11 +54,11 @@ $.getJSON("merchant.json", function (data) {
             "        <div class=\"group-content\">\n" + "<div id=\"m" + k + "\" class=\"row\">\n");
         let t = 0;
         for (let i = 0; i < data.merchants.length; i++) {
-            var merchant = data.merchants[i];
+            let merchant = data.merchants[i];
             if (merchant.group === group) {
                 t++;
                 $('#m' + k).append(
-                    "                <div class=\"col-3 merchant d-flex margin-top-15px flex-column align-items-center\" onclick=\"openUrl('" + merchant.url + "')\">\n" +
+                    "                <div class=\"col-3 merchant d-flex margin-top-15px flex-column align-items-center\" onclick=\"openUrl('" + merchant.name + "','" + merchant.url + "','" + merchant.description + "')\">\n" +
                     "                    <img src=\"" + merchant.icon + "\" class=\"merchant-icon\">\n" +
                     "                    <span class=\"merchant-title mt-1\">" + merchant.name + "</span>\n" +
                     "                </div>\n" +
