@@ -22,7 +22,7 @@ function searchMerchant(query) {
 function goToPage(pageId) {
     console.log(pageId);
     const El = document.getElementById(pageId);
-    El.scrollIntoView({ behavior: 'smooth', block: 'center'});
+    El.scrollIntoView({ behavior: 'smooth', block: 'start'});
     // scrollToElm(document.getElementById("container"), El, 600);
 }
 
