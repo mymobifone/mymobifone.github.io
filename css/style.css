@@ -57,6 +57,15 @@ body {
     margin-left: 0;
 }
 
+#modal-body {
+    font-size: 14px;
+}
+
+.btn-agree {
+    background-color: #00579C;
+    color: white;
+}
+
 .search-container {
     background-color: #00579C;
     padding-right: 14px;

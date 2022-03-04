@@ -29,7 +29,7 @@ function goToPage(pageId) {
 function openUrl(name, url, description) {
     //location.href = url;
     $('#modal-title').text(name);
-    $('#modal-body').text(description);
+    $('#modal-body').html(description);
     $('#goToUrl').attr('href', url);
     $('#showDialog').click();
 }
