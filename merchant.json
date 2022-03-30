@@ -41,6 +41,13 @@
       "group": "Mua sắm - Giải trí",
       "description": "Shopee là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone.<br/>Shopee không phải là một phần hay bộ phận của ứng dụng My MobiFone.<br/>Đối với các khiếu nại, thắc mắc về Shopee, vui lòng liên hệ theo hotline 1900 1221."
     },
+ 	{
+      "name": "Lazada",
+      "icon": "images/Lazada.png",
+      "url": "https://lzd.co/Laz_MobiFone",
+      "group": "Mua sắm - Giải trí",
+      "description": "Lazada là đơn vị có tư cách pháp nhân độc lập, không phải là công ty con, chi nhánh hay đơn vị trực thuộc của Tổng Công ty viễn thông MobiFone.<br/>Lazada không phải là một phần hay bộ phận của ứng dụng My MobiFone.<br/>Đối với các khiếu nại, thắc mắc về Lazada, vui lòng liên hệ theo hotline 1900 1007."
+    },
     {
       "name": "ATM Online",
       "icon": "images/ATM.png",
