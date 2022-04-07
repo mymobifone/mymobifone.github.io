@@ -62,12 +62,12 @@ body {
 }
 
 .btn-agree {
-    background-color: #0081CC;
+    background-color: #1498E2;
     color: white;
 }
 
 .search-container {
-    background-color: #0081CC;
+    background-color: #1498E2;
     padding-right: 14px;
     padding-left: 14px;
     width: 100%;
@@ -94,7 +94,7 @@ body {
     border: 1px solid #E5CDD3;
     box-sizing: border-box;
     border-radius: 20px;
-    height: 40px;
+    height: 35px;
     width: 100%;
     padding-left: 48px;
     padding-right: 48px;
