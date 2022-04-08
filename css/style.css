@@ -5,10 +5,9 @@ body {
 .container {
     padding: 0;
     position: fixed;
-    top: 56px;
     z-index: 100;
     overflow: auto;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     left: 0;
     right: 0;
@@ -48,7 +47,7 @@ body {
 }
 
 #scrollable-container {
-    height: 200vh;
+    height: 110vh;
     width: 100%;
 }
 
@@ -62,18 +61,18 @@ body {
 }
 
 .btn-agree {
-    background-color: #00579C;
+    background-color: #1498E2;
     color: white;
 }
 
 .search-container {
-    background-color: #00579C;
+    background-color: #1498E2;
     padding-right: 14px;
     padding-left: 14px;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 10;
+    display: none !important;
 }
 
 .input-search {
@@ -95,7 +94,7 @@ body {
     border: 1px solid #E5CDD3;
     box-sizing: border-box;
     border-radius: 20px;
-    height: 40px;
+    height: 35px;
     width: 100%;
     padding-left: 48px;
     padding-right: 48px;
@@ -190,7 +189,7 @@ body {
 }
 
 .merchant-title {
-    width: 50px;
+    width: 70px;
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
