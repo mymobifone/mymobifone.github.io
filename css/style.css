@@ -179,6 +179,22 @@ body {
     padding-top: 15px;
 }
 
+.merchant-icon-wrapper {
+    position: relative;
+}
+
+.merchant-icon-badge {
+    position: absolute;
+    right: -11px;
+    top: -7px;
+    font-size: 9px;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    padding: 2px;
+    font-weight: 700;
+}
+
 .merchant-icon {
     width: 53px;
     height: 53px;

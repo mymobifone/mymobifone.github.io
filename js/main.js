@@ -50,7 +50,7 @@ $.getJSON("merchant.json", function (data) {
     for (let k = 0; k < groupNames.length; k++) {
         var group = groupNames[k];
         $('#scrollable-container').append("<div class=\"merchant-group " + (k > 0 ? "mt-2" : "") + "\" id='" + group + "'>\n" +
-            "        <div class=\"group-title\">" + group + "</div>\n" +
+            "        <div id=\"" + group + "\" class=\"group-title\">" + group + "</div>\n" +
             "        <div class=\"group-content\">\n" + "<div id=\"m" + k + "\" class=\"row\">\n");
         let t = 0;
         for (let i = 0; i < data.merchants.length; i++) {
@@ -59,8 +59,11 @@ $.getJSON("merchant.json", function (data) {
                 t++;
                 $('#m' + k).append(
                     "                <div class=\"col-3 merchant d-flex margin-top-15px flex-column align-items-center\" onclick=\"openUrl('" + merchant.name + "','" + merchant.url + "','" + merchant.description + "')\">\n" +
-                    "                    <img src=\"" + merchant.icon + "\" class=\"merchant-icon\">\n" +
-                    "                    <span class=\"merchant-title mt-1\">" + merchant.name + "</span>\n" +
+                    "                    <div class=\"merchant-icon-wrapper\">" +
+                    "                       <span class=\"" + (merchant.badge.length > 0 ? "merchant-icon-badge" : "hidden") + "\">" + merchant.badge + "</span>" +
+                    "                       <img src=\"" + merchant.icon + "\" class=\"merchant-icon\">" +
+                    "                   </div>\n" +
+                    "                   <span class=\"merchant-title mt-1\">" + merchant.name + "</span>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>\n" +
